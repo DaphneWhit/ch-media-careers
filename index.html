@@ -6,7 +6,6 @@
 <title>CH传媒科技 - 加入我们</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  
   :root {
     --primary: #1a1a2e;
     --accent: #e94560;
@@ -16,107 +15,47 @@
     --text-light: #666;
     --border: #e0e0e0;
   }
-
   body {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
   }
-
-  /* Hero */
   .hero {
     background: linear-gradient(135deg, var(--primary) 0%, #16213e 100%);
     color: white;
     padding: 80px 20px;
     text-align: center;
   }
-  .hero h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 12px;
-    letter-spacing: 2px;
-  }
-  .hero p {
-    font-size: 1.1rem;
-    opacity: 0.85;
-    max-width: 600px;
-    margin: 0 auto 30px;
-  }
-  .hero-tags {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .hero-tag {
-    background: rgba(255,255,255,0.15);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-  }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 12px; letter-spacing: 2px; }
+  .hero p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 30px; }
+  .hero-tags { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .hero-tag { background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; }
 
-  /* Stats */
   .stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     background: var(--border);
     margin-top: -40px;
-    max-width: 900px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   }
-  .stat {
-    background: white;
-    padding: 24px 16px;
-    text-align: center;
-  }
-  .stat-num {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--accent);
-  }
-  .stat-label {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    margin-top: 4px;
-  }
+  .stat { background: white; padding: 24px 16px; text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
 
-  /* Container */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+  .section-title { text-align: center; font-size: 1.8rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+  .section-sub { text-align: center; color: var(--text-light); margin-bottom: 12px; }
 
-  /* Section title */
-  .section-title {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 8px;
-  }
-  .section-sub {
-    text-align: center;
-    color: var(--text-light);
-    margin-bottom: 32px;
-  }
-
-  /* Filter */
-  .filter {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
-  }
-  .filter-btn {
-    padding: 6px 18px;
+  .tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+  .tab-btn {
+    padding: 8px 20px;
     border: 1.5px solid var(--border);
     border-radius: 20px;
     background: white;
@@ -125,18 +64,9 @@
     transition: all 0.2s;
     color: var(--text);
   }
-  .filter-btn:hover, .filter-btn.active {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: #fff0f3;
-  }
+  .tab-btn:hover, .tab-btn.active { border-color: var(--accent); color: var(--accent); background: #fff0f3; }
 
-  /* Job cards */
-  .job-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+  .job-list { display: flex; flex-direction: column; gap: 16px; }
 
   .job-card {
     background: var(--card);
@@ -147,11 +77,7 @@
     transition: all 0.25s;
     position: relative;
   }
-  .job-card:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-    border-color: var(--accent);
-  }
+  .job-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: var(--accent); }
   .job-card.urgent::before {
     content: "🔥 紧急";
     position: absolute;
@@ -164,82 +90,33 @@
     border-radius: 0 0 8px 8px;
     font-weight: 600;
   }
-  .job-card.paused { opacity: 0.6; }
+  .job-card.paused { opacity: 0.65; }
 
-  .job-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 10px;
-  }
-  .job-title {
-    font-size: 1.1rem;
+  .job-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+  .job-title { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+  .job-salary { font-size: 1rem; font-weight: 700; color: var(--accent); white-space: nowrap; }
+  .job-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; }
+  .job-meta span { display: flex; align-items: center; gap: 4px; }
+  .job-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .job-tag { background: #f0f0f5; color: #555; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; }
+  .job-section-tag {
+    font-size: 0.75rem;
     font-weight: 700;
-    color: var(--primary);
-  }
-  .job-salary {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--accent);
-    white-space: nowrap;
-  }
-  .job-meta {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    margin-bottom: 12px;
-  }
-  .job-meta span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .job-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-  .job-tag {
-    background: #f0f0f5;
-    color: #555;
-    padding: 3px 10px;
+    padding: 2px 10px;
     border-radius: 12px;
-    font-size: 0.78rem;
+    margin-bottom: 8px;
+    display: inline-block;
   }
+  .tag-may { background: #e8f5e9; color: #2e7d32; }
+  .tag-mid { background: #e3f2fd; color: #1565c0; }
 
-  /* Expanded JD */
-  .job-detail {
-    display: none;
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px dashed var(--border);
-  }
+  .job-detail { display: none; margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--border); }
   .job-card.open .job-detail { display: block; }
-  .job-detail h4 {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 14px 0 6px;
-  }
-  .job-detail ul {
-    padding-left: 20px;
-  }
-  .job-detail li {
-    font-size: 0.88rem;
-    color: #444;
-    margin-bottom: 4px;
-  }
-  .job-actions {
-    margin-top: 16px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
+  .job-detail h4 { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin: 14px 0 6px; }
+  .job-detail ul { padding-left: 20px; }
+  .job-detail li { font-size: 0.88rem; color: #444; margin-bottom: 4px; }
+  .job-actions { margin-top: 16px; display: flex; gap: 12px; align-items: center; }
 
-  /* Buttons */
   .btn-primary {
     background: var(--accent);
     color: white;
@@ -266,29 +143,12 @@
     display: inline-block;
   }
 
-  /* Contact */
-  .contact {
-    background: var(--primary);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-  }
+  .contact { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
   .contact h2 { font-size: 1.6rem; margin-bottom: 20px; }
-  .contact-item {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    opacity: 0.9;
-  }
+  .contact-item { font-size: 1.1rem; margin-bottom: 10px; opacity: 0.9; }
   .contact-item strong { color: #ffd1d9; }
 
-  /* Footer */
-  footer {
-    background: #111;
-    color: #666;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.82rem;
-  }
+  footer { background: #111; color: #666; text-align: center; padding: 20px; font-size: 0.82rem; }
 
   @media (max-width: 600px) {
     .stats { grid-template-columns: repeat(2, 1fr); margin-top: 0; border-radius: 0; }
@@ -299,7 +159,6 @@
 </head>
 <body>
 
-<!-- Hero -->
 <div class="hero">
   <h1>CH传媒科技</h1>
   <p>AI内容生成与互动体验平台 · 面向全球市场<br>扁平管理 · 技术氛围浓厚 · 远程协作</p>
@@ -311,195 +170,43 @@
   </div>
 </div>
 
-<!-- Stats -->
 <div class="stats">
-  <div class="stat">
-    <div class="stat-num">13</div>
-    <div class="stat-label">在招岗位</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">38+</div>
-    <div class="stat-label">需求人数</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">P3-P6</div>
-    <div class="stat-label">职级范围</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">18-50K</div>
-    <div class="stat-label">薪资区间</div>
-  </div>
+  <div class="stat"><div class="stat-num">25+</div><div class="stat-label">在招岗位</div></div>
+  <div class="stat"><div class="stat-num">60+</div><div class="stat-label">需求人数</div></div>
+  <div class="stat"><div class="stat-num">P3-P6</div><div class="stat-label">职级范围</div></div>
+  <div class="stat"><div class="stat-num">8-70K</div><div class="stat-label">薪资区间</div></div>
 </div>
 
-<!-- Job List -->
 <div class="container">
   <h2 class="section-title">热招职位</h2>
   <p class="section-sub">虚位以待，职等你来</p>
 
-  <div class="filter">
-    <button class="filter-btn active" onclick="filterJobs('all')">全部</button>
-    <button class="filter-btn" onclick="filterJobs('urgent')">🔥 紧急</button>
-    <button class="filter-btn" onclick="filterJobs('ai')">🤖 AI类</button>
-    <button class="filter-btn" onclick="filterJobs('dev')">💻 技术开发</button>
-    <button class="filter-btn" onclick="filterJobs('product')">📋 产品/设计</button>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="filterJobs('all')">全部</button>
+    <button class="tab-btn" onclick="filterJobs('urgent')">🔥 紧急</button>
+    <button class="tab-btn" onclick="filterJobs('ai')">🤖 AI类</button>
+    <button class="tab-btn" onclick="filterJobs('dev')">💻 技术开发</button>
+    <button class="tab-btn" onclick="filterJobs('product')">📋 产品/设计</button>
+    <button class="tab-btn" onclick="filterJobs('seo')">🔍 SEO</button>
+    <button class="tab-btn" onclick="filterJobs('manager')">📊 管理</button>
   </div>
 
   <div class="job-list" id="jobList">
 
-    <!-- Job 1 -->
-    <div class="job-card" data-tags="ai urgent" onclick="toggleCard(this)">
-      <div class="job-header">
-        <div class="job-title">AI效能官</div>
-        <div class="job-salary">20-50K</div>
-      </div>
-      <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 5人</span>
-        <span>🎓 本科+</span>
-      </div>
-      <div class="job-tags">
-        <span class="job-tag">Agent</span>
-        <span class="job-tag">大模型</span>
-        <span class="job-tag">AI工具</span>
-        <span class="job-tag">Coze/Dify</span>
-      </div>
-      <div class="job-detail">
-        <h4>岗位职责</h4>
-        <ul>
-          <li>深入各业务线，识别AI提效场景，设计Agent自动化工作流</li>
-          <li>主导内部AI工具选型、搭建与推广，持续提升全团队人效</li>
-          <li>建立AI效能评估体系，用数据证明每个自动化项目的ROI</li>
-          <li>作为公司AI能力输出的对外窗口，支持业务赋能与合作方接洽</li>
-          <li>跟踪AI前沿动态，快速将新模型/新工具转化为业务实战价值</li>
-        </ul>
-        <h4>硬性要求</h4>
-        <ul>
-          <li>熟练掌握Python/Node.js/Go/PHP任一语言，能独立写脚本抓取数据、调用API接口</li>
-          <li>极度精通主流大模型（Claude 3.7/Opus 4.6、GPT-5.4、Gemini 2.5 Pro）的Prompt工程和调优</li>
-          <li>必须在Coze、Dify、FastGPT等主流低代码平台上，独立搭建并上线过企业级Agent工作流的真实项目经验（面试需带作品并现场演示）</li>
-          <li>具备极强业务Sense，能在一周内看懂一个陌生业务的完整流转链路</li>
-        </ul>
-        <h4>加分项</h4>
-        <ul>
-          <li>懂RPA（UiPath、影刀）结合LLM实现全自动跨域端网页填表抓取经验</li>
-          <li>在出海、泛娱乐、游戏买量或灰产领域有实际操盘经验</li>
-          <li>曾在互联网大厂担任过内部效能工具产品经理（B端PM）</li>
-        </ul>
-        <div class="job-actions">
-          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
-          <a href="https://t.me/Foya00" class="btn-secondary">招聘频道</a>
-        </div>
-      </div>
-    </div>
+    <!-- ========== 效能中心（5月） ========== -->
 
-    <!-- Job 2 -->
-    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
-      <div class="job-header">
-        <div class="job-title">Aengt架构师</div>
-        <div class="job-salary">20-40K</div>
-      </div>
-      <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 20人</span>
-        <span>🎓 本科+</span>
-      </div>
-      <div class="job-tags">
-        <span class="job-tag">AI产品工程师</span>
-        <span class="job-tag">全栈</span>
-        <span class="job-tag">Agent</span>
-        <span class="job-tag">LangChain</span>
-      </div>
-      <div class="job-detail">
-        <h4>岗位定位</h4>
-        <p style="font-size:0.88rem;color:#444;margin-bottom:10px">在这里，你不仅是一个Coder，更是业务效能的放大器。以"AI产品工程师"视角，主导AI落地从0到1，打造直接驱动业务、提升组织运转效率的智能化工具与Agent架构。</p>
-        <h4>岗位职责</h4>
-        <ul>
-          <li>作为核心Owner，独立负责AI效能工具及Agent应用从0到1落地（需求沟通→前后端→API→持续部署）</li>
-          <li>以1-2周为周期快速构建并上线MVP原型</li>
-          <li>结合OpenAI、Claude等大语言模型能力，设计并优化Prompt架构</li>
-          <li>打破不同系统间的数据与流程孤岛，优化工具链</li>
-        </ul>
-        <h4>任职要求</h4>
-        <ul>
-          <li>本科及以上（计算机相关专业优先），2年+研发经验</li>
-          <li>精通Go/PHP后端，熟练React/Vue前端</li>
-          <li>具备丰富的大模型（LLM）实际调用与调优经验，深刻理解Prompt Engineering底层逻辑</li>
-          <li>有实际落地的AI工具、自动化流或效率提升项目经验</li>
-        </ul>
-        <h4>加分项</h4>
-        <ul>
-          <li>熟练掌握LangChain、OpenClaw、Dify等Agent编排框架</li>
-          <li>独立开发过高可用Bot、RAG知识库、自动化爬虫</li>
-          <li>具备丰富的海外或主流SaaS生态集成经验（Google Sheets/Notion/Slack/Lark）</li>
-        </ul>
-        <div class="job-actions">
-          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
-          <a href="https://t.me/Foya00" class="btn-secondary">招聘频道</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Job 3 -->
-    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
-      <div class="job-header">
-        <div class="job-title">AI应用开发工程师</div>
-        <div class="job-salary">20-25K</div>
-      </div>
-      <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 3-6人</span>
-        <span>🎓 本科+</span>
-      </div>
-      <div class="job-tags">
-        <span class="job-tag">LLM</span>
-        <span class="job-tag">RAG</span>
-        <span class="job-tag">向量库</span>
-        <span class="job-tag">Python/Go</span>
-      </div>
-      <div class="job-detail">
-        <h4>岗位职责</h4>
-        <ul>
-          <li>基于LLM（GPT/Claude/Qwen等）设计开发AI驱动应用功能（对话系统/智能助手/内容生成）</li>
-          <li>Prompt Engineering设计与优化，提升模型输出质量与稳定性</li>
-          <li>构建RAG（检索增强生成）系统，整合向量数据库与知识库管理</li>
-          <li>设计AI Agent及多Agent协作框架（LangChain/LlamaIndex/AutoGen等）</li>
-          <li>搭建模型调用中间层，统一管理API路由、限流、缓存与成本控制</li>
-        </ul>
-        <h4>任职要求</h4>
-        <ul>
-          <li>本科及以上，计算机/软件工程或相关专业</li>
-          <li>熟练掌握Python/Node.js/Go，具备扎实工程开发能力</li>
-          <li>熟悉OpenAI、Anthropic等LLM API调用</li>
-          <li>有LangChain/LlamaIndex/Dify实际使用经验</li>
-          <li>了解向量数据库（Pinecone/Weaviate/Chroma/Milvus）</li>
-        </ul>
-        <div class="job-actions">
-          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Job 4 - 紧急 -->
     <div class="job-card urgent" data-tags="ai urgent" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">高级/专家AI流程开发工程师（Agent/自动化）</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">Agent/Skill</span>
-        <span class="job-tag">OpenClaw</span>
-        <span class="job-tag">FastAPI</span>
-        <span class="job-tag">短视频</span>
-        <span class="job-tag">RAG</span>
+        <span class="job-tag">Agent/Skill</span><span class="job-tag">OpenClaw</span>
+        <span class="job-tag">FastAPI</span><span class="job-tag">短视频</span><span class="job-tag">RAG</span>
       </div>
       <div class="job-detail">
         <h4>岗位职责</h4>
@@ -508,9 +215,9 @@
           <li>前端页面（Next.js/React）+后端接口（FastAPI/Gin）+流程节点和数据处理逻辑开发</li>
           <li>负责OpenClaw或同类Agent平台的Skill接入、调试、优化与部署</li>
           <li>对接ChatGPT/Claude/模型API，实现短视频内容审核、字幕生成、标签提取等流程自动化</li>
-          <li>接入Milvus/Faiss/pgvector向量库，实现语义检索、RAG内容召回等开发</li>
+          <li>接入Milvus/Faiss/pgvector向量库，实现语义检索、RAG内容召回</li>
         </ul>
-        <h4>技术栈要求</h4>
+        <h4>技术栈</h4>
         <ul>
           <li><strong>必须</strong>：Python + FastAPI + Cursor/OpenClaw + PostgreSQL/MySQL/Redis</li>
           <li><strong>了解</strong>：Golang/TypeScript + Gin/Next.js/React + Docker/K8s + Milvus/Faiss</li>
@@ -518,49 +225,42 @@
         <h4>加分项</h4>
         <ul>
           <li>有OpenClaw Skill开发/部署/维护经验</li>
-          <li>有LLM接入经验（Prompt设计/函数调用/工具调用/结构化输出处理）</li>
-          <li>有LangSmith或同类LLM可观测平台使用经验</li>
-          <li>有短视频/直播/内容平台业务经验，了解内容审核/推荐/运营全链路</li>
+          <li>有LLM接入经验（Prompt设计/函数调用/工具调用）</li>
+          <li>有短视频/直播/内容平台业务经验</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+          <a href="https://t.me/Foya00" class="btn-secondary">招聘频道</a>
         </div>
       </div>
     </div>
 
-    <!-- Job 5 - 紧急 -->
     <div class="job-card urgent" data-tags="ai urgent" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">高级/专家AI应用工程师（Agent Ops）</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">Agent Ops</span>
-        <span class="job-tag">K8s</span>
-        <span class="job-tag">Prometheus</span>
-        <span class="job-tag">CI/CD</span>
-        <span class="job-tag">LangSmith</span>
+        <span class="job-tag">Agent Ops</span><span class="job-tag">K8s</span>
+        <span class="job-tag">Prometheus</span><span class="job-tag">CI/CD</span><span class="job-tag">LangSmith</span>
       </div>
       <div class="job-detail">
         <h4>岗位职责</h4>
         <ul>
           <li>负责AI Agent/Skill/工作流的生产环境运营，建立上线标准、灰度策略和回滚机制</li>
           <li>搭建Agent可观测体系，接入LangSmith，监控调用链路/响应质量/异常率/Token消耗</li>
-          <li>对接Prometheus/Grafana/ELK/Fluentd构建统一监控与日志平台，设置告警规则</li>
+          <li>对接Prometheus/Grafana/ELK/Fluentd构建统一监控与日志平台</li>
           <li>负责Agent基础设施运维（K8s/Helm/Docker），扩缩容、配置管理、容灾演练</li>
-          <li>建立Agent效果评估体系，定期分析输出质量/意图识别准确率/任务完成率</li>
-          <li>推进CI/CD流水线建设，实现Agent Skill自动化测试/部署/版本管理</li>
+          <li>建立Agent效果评估体系，推进CI/CD流水线建设</li>
         </ul>
-        <h4>技术栈要求</h4>
+        <h4>技术栈</h4>
         <ul>
           <li><strong>必须</strong>：Python + K8s/Helm/Docker + Prometheus/Grafana/ELK + Jenkins/CI/CD</li>
-          <li><strong>了解</strong>：Golang + Robot Framework/ATDD + Redis/PostgreSQL + LangSmith</li>
+          <li><strong>了解</strong>：Golang + Robot Framework/ATDD + Redis/PostgreSQL</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -568,45 +268,30 @@
       </div>
     </div>
 
-    <!-- Job 6 - 紧急 -->
     <div class="job-card urgent" data-tags="product urgent" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">AI产品经理（Agent/Skill方向）</div>
         <div class="job-salary">18-30K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P4</span>
-        <span>👥 1人</span>
-        <span>🎓 专科+</span>
+        <span>📍 远程</span><span>💼 P4</span><span>👥 1人</span><span>🎓 专科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">Agent</span>
-        <span class="job-tag">Skill</span>
-        <span class="job-tag">产品设计</span>
-        <span class="job-tag">自动化流程</span>
+        <span class="job-tag">Agent</span><span class="job-tag">Skill</span><span class="job-tag">产品设计</span><span class="job-tag">自动化流程</span>
       </div>
       <div class="job-detail">
         <h4>岗位职责</h4>
         <ul>
           <li>负责AI Agent、Skill、自动化流程等相关产品设计</li>
           <li>将模糊业务需求拆解为清晰的产品方案、功能结构与流程设计</li>
-          <li>梳理Agent/Skill的职责边界、触发逻辑、输入输出规则与执行流程</li>
           <li>推动AI产品从需求分析到上线落地的完整闭环</li>
-          <li>持续优化AI应用效果、流程稳定性与业务价值</li>
         </ul>
         <h4>任职要求</h4>
         <ul>
           <li>3年+产品经理经验，有复杂系统或流程型产品经验优先</li>
-          <li>逻辑能力强，结构化思维好，流程设计能力完整</li>
+          <li>逻辑强、结构化思维好、流程设计能力完整</li>
           <li>理解AI、Agent、Skill、Workflow等相关概念及应用场景</li>
-          <li>具备优秀文档输出能力和跨团队协作能力</li>
-        </ul>
-        <h4>加分项</h4>
-        <ul>
-          <li>有AI产品/Agent/Skill/自动化平台相关经验</li>
-          <li>使用过OpenClaw、Dify、Coze、ChatGPT、Claude等工具</li>
-          <li>有从0到1推动AI产品落地经验</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -614,47 +299,192 @@
       </div>
     </div>
 
-    <!-- Job 7 -->
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
+      <div class="job-header">
+        <div class="job-title">AI效能官</div>
+        <div class="job-salary">20-50K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 5人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">Agent</span><span class="job-tag">大模型</span><span class="job-tag">AI工具</span><span class="job-tag">Coze/Dify</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>深入各业务线，识别AI提效场景，设计Agent自动化工作流</li>
+          <li>主导内部AI工具选型、搭建与推广，持续提升全团队人效</li>
+          <li>建立AI效能评估体系，用数据证明ROI</li>
+        </ul>
+        <h4>硬性要求</h4>
+        <ul>
+          <li>熟练掌握Python/Node.js/Go/PHP任一语言</li>
+          <li>极度精通主流大模型（Claude 3.7/GPT-5.4/Gemini 2.5 Pro）Prompt工程</li>
+          <li>在Coze/Dify/FastGPT上有企业级Agent真实项目经验（面试带作品演示）</li>
+          <li>具备极强业务Sense，能在一周内看懂陌生业务完整流转链路</li>
+        </ul>
+        <h4>加分项</h4>
+        <ul>
+          <li>懂RPA（UiPath/影刀）结合LLM</li>
+          <li>出海/泛娱乐/灰产操盘经验</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
+      <div class="job-header">
+        <div class="job-title">Aengt架构师</div>
+        <div class="job-salary">20-40K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 20人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">AI产品工程师</span><span class="job-tag">全栈</span><span class="job-tag">LangChain</span><span class="job-tag">RAG</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>作为核心Owner，独立负责AI效能工具及Agent应用从0到1落地</li>
+          <li>以1-2周为周期快速构建并上线MVP原型</li>
+          <li>结合OpenAI/Claude设计Prompt架构，打破系统间数据与流程孤岛</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+研发经验，精通Go/PHP后端，熟练React/Vue</li>
+          <li>丰富LLM调用与调优经验，深刻理解Prompt Engineering底层逻辑</li>
+          <li>有AI工具/自动化流实际落地项目经验</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
+      <div class="job-header">
+        <div class="job-title">AI应用开发工程师</div>
+        <div class="job-salary">20-25K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 3-6人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">LLM</span><span class="job-tag">RAG</span><span class="job-tag">向量库</span><span class="job-tag">Python/Go</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>基于LLM（GPT/Claude/Qwen等）设计开发AI应用功能（对话系统/智能助手/内容生成）</li>
+          <li>Prompt Engineering设计与优化，构建RAG系统</li>
+          <li>设计AI Agent及多Agent协作框架（LangChain/LlamaIndex/AutoGen）</li>
+          <li>搭建模型调用中间层，统一管理API路由、限流、缓存与成本控制</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>熟练掌握Python/Node.js/Go，熟悉OpenAI/Anthropic等LLM API</li>
+          <li>有LangChain/LlamaIndex/Dify使用经验，了解向量数据库（Pinecone/Weaviate/Milvus）</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
+      <div class="job-header">
+        <div class="job-title">高级AI开发工程师</div>
+        <div class="job-salary">20-40K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 3人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">AI辅助编程</span><span class="job-tag">Claude Code</span><span class="job-tag">Cursor</span><span class="job-tag">Agent</span>
+      </div>
+      <div class="job-detail">
+        <h4>硬性要求</h4>
+        <ul>
+          <li>熟练使用Claude Code/Cursor/Copilot等AI辅助开发工具，能用AI 10倍提升自身开发效率</li>
+          <li>掌握Python/Node.js后端，具备Web前端基础（HTML/JS/React/Vue）</li>
+          <li>有实际落地至少一个Agent项目（LangChain/AutoGen/Dify/Claude API等）</li>
+          <li>能独立完成从需求分析→架构设计→编码→部署的全流程</li>
+        </ul>
+        <h4>加分项</h4>
+        <ul>
+          <li>熟悉MCP或Agent SDK开发；有Docker/基础DevOps经验</li>
+          <li>有Playwright/浏览器自动化经验</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
+      <div class="job-header">
+        <div class="job-title">AI研发工程师</div>
+        <div class="job-salary">20-40K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P3-P6</span><span>👥 2人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">Agent</span><span class="job-tag">vLLM</span><span class="job-tag">LoRA/SFT</span><span class="job-tag">全栈</span>
+      </div>
+      <div class="job-detail">
+        <h4>简历筛选要点</h4>
+        <ul>
+          <li>AI Native工作流重度用户（Cursor/Claude Code/Codex/DeepSeek等）</li>
+          <li>有VibeCoding/AI辅助开发实战经验，近3-6个月有拿得出手的作品</li>
+        </ul>
+        <h4>主修方向（至少一个方向有真深度）</h4>
+        <ul>
+          <li><strong>Agent与工作流</strong>：复杂Agent系统/工具编排/多模型协作/长任务调度</li>
+          <li><strong>推理与服务化</strong>：vLLM/SGLang/TensorRT等，GPU服务工程化</li>
+          <li><strong>RAG与检索</strong>：生产级RAG经验，向量库选型/混合检索/相关性评估</li>
+          <li><strong>模型微调与评估</strong>：LoRA/SFT实战，自动化Eval体系设计</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
     <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">Go高级后端工程师</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">Go</span>
-        <span class="job-tag">微服务</span>
-        <span class="job-tag">高并发</span>
-        <span class="job-tag">AI辅助编程</span>
+        <span class="job-tag">Go</span><span class="job-tag">微服务</span><span class="job-tag">高并发</span><span class="job-tag">AI辅助编程</span>
       </div>
       <div class="job-detail">
-        <h4>岗位职责</h4>
-        <ul>
-          <li>负责公司核心后端服务的架构设计、开发、优化与维护</li>
-          <li>参与系统架构设计和技术方案制定，保障系统稳定性/可扩展性/高可用性</li>
-          <li>负责业务接口、服务模块、数据处理流程的开发与性能优化</li>
-          <li>持续推进代码质量、研发规范、系统工程化建设及AI辅助研发流程落地</li>
-        </ul>
         <h4>任职要求</h4>
         <ul>
-          <li>本科及以上，计算机相关专业优先</li>
-          <li>5年+ Go语言后端开发经验，具备完整项目交付和线上系统维护经验</li>
-          <li>深入掌握Go核心机制（goroutine/channel/GC调优/内存模型/并发编程）</li>
+          <li>5年+ Go语言后端开发经验，深入掌握Go核心机制（goroutine/channel/GC调优/并发编程）</li>
           <li>熟悉gin/gRPC/protobuf/go-zero/kratos等框架</li>
           <li>熟悉MySQL/Redis/Kafka/RabbitMQ等中间件</li>
         </ul>
         <h4>必须能力</h4>
-        <p style="font-size:0.88rem;color:#c62828;font-weight:600;margin:6px 0">熟练使用Claude Code/Cursor/Codex等AI编程工具，实际编码中大部分时间借助AI完成，而非仅偶尔尝试。</p>
+        <p style="font-size:0.88rem;color:#c62828;font-weight:600;margin:4px 0">熟练使用Claude Code/Cursor/Codex等AI编程工具，实际编码中大部分时间借助AI完成</p>
         <h4>加分项</h4>
         <ul>
-          <li>有大模型接入/AI Agent/智能问答/RAG/推荐系统经验</li>
-          <li>了解LLM原理，有Prompt Engineering或模型微调实践经验</li>
-          <li>熟悉向量数据库和LangChain/AutoGen等Agent框架</li>
+          <li>有大模型接入/AI Agent/RAG/推荐系统经验</li>
+          <li>了解LLM原理和Prompt工程，熟悉向量数据库</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -662,37 +492,24 @@
       </div>
     </div>
 
-    <!-- Job 8 -->
     <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">Flutter高级开发工程师</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">Flutter</span>
-        <span class="job-tag">跨端</span>
-        <span class="job-tag">Dart</span>
-        <span class="job-tag">iOS/Android</span>
+        <span class="job-tag">Flutter</span><span class="job-tag">跨端</span><span class="job-tag">Dart</span><span class="job-tag">iOS/Android</span>
       </div>
       <div class="job-detail">
         <h4>岗位职责</h4>
         <ul>
-          <li>负责Flutter客户端产品的需求开发、功能迭代、性能优化与稳定性建设</li>
+          <li>Flutter客户端产品的需求开发、功能迭代、性能优化与稳定性建设</li>
+          <li>核心模块技术攻关（复杂交互/性能/兼容性/包体积/启动速度/稳定性）</li>
           <li>参与Flutter客户端整体架构设计，推进跨端技术方案/组件体系/工程化建设</li>
-          <li>核心模块技术攻关（复杂交互/性能/兼容性/包体积/启动速度/稳定性问题）</li>
-          <li>参与客户端代码规范、组件沉淀、状态管理、路由体系、CI/CD流程及研发效能建设</li>
-        </ul>
-        <h4>加分项</h4>
-        <ul>
-          <li>有主导App/后台/SaaS/内容社区完整项目经验优先</li>
-          <li>Flutter与原生Android/iOS能力集成经验丰富</li>
-          <li>熟悉主流状态管理（Riverpod/Bloc等）</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -700,23 +517,17 @@
       </div>
     </div>
 
-    <!-- Job 9 -->
     <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">运维工程师</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">K8s</span>
-        <span class="job-tag">Docker</span>
-        <span class="job-tag">CI-CD</span>
-        <span class="job-tag">Prometheus</span>
+        <span class="job-tag">K8s</span><span class="job-tag">Docker</span><span class="job-tag">CI-CD</span><span class="job-tag">Prometheus</span>
       </div>
       <div class="job-detail">
         <h4>岗位职责</h4>
@@ -729,7 +540,6 @@
         <ul>
           <li>3年+运维经验，精通Linux系统和Shell脚本</li>
           <li>熟悉Kubernetes/Docker，熟悉Prometheus/Grafana/ELK等监控体系</li>
-          <li>有AI业务运维经验优先</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -737,33 +547,26 @@
       </div>
     </div>
 
-    <!-- Job 10 -->
     <div class="job-card" data-tags="product" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">高级UI设计师</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">UI设计</span>
-        <span class="job-tag">设计系统</span>
-        <span class="job-tag">Figma</span>
-        <span class="job-tag">AI辅助设计</span>
+        <span class="job-tag">UI设计</span><span class="job-tag">设计系统</span><span class="job-tag">Figma</span><span class="job-tag">AI辅助设计</span>
       </div>
       <div class="job-detail">
         <h4>简历筛选要点</h4>
         <ul>
-          <li>必须具备全栈理解能力（产品业务/前端页面/后端接口/数据流/部署链路/测试验收）</li>
-          <li>必须有明确专业纵深，5年+UI/设计系统/产品视觉/组件库/前端视觉还原经验</li>
+          <li>必须具备全栈理解能力（产品业务/前端页面/后端接口/数据流/部署链路）</li>
+          <li>5年+UI/设计系统/产品视觉/组件库/前端视觉还原经验</li>
           <li>有App/后台/SaaS/内容社区项目经验优先</li>
           <li>熟悉Figma，能建立组件库/变量/字体/色彩/间距/图标/状态规范</li>
-          <li>具备成熟审美，能判断AI生成图片/页面/组件是否可用</li>
-          <li>能使用AI工具进行视觉探索/素材生成/页面延展，但最终审美由人工把关</li>
+          <li>能使用AI辅助视觉探索/素材生成，但最终审美由人工把关</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -771,32 +574,24 @@
       </div>
     </div>
 
-    <!-- Job 11 -->
     <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-may">效能中心 · 5月热招</div>
       <div class="job-header">
         <div class="job-title">测试工程师</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P5-P6</span>
-        <span>👥 1人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">测试</span>
-        <span class="job-tag">QA</span>
-        <span class="job-tag">E2E</span>
-        <span class="job-tag">AI辅助测试</span>
+        <span class="job-tag">测试</span><span class="job-tag">QA</span><span class="job-tag">E2E</span><span class="job-tag">AI辅助测试</span>
       </div>
       <div class="job-detail">
         <h4>简历筛选要点</h4>
         <ul>
           <li>必须具备全栈理解能力，6年+测试/QA/质量工程/测试开发经验</li>
           <li>有App/Web/后台/API/支付权限/内容社区测试经验优先</li>
-          <li>熟悉测试用例设计/接口测试/E2E测试/回归测试/兼容性测试/性能测试/缺陷管理</li>
-          <li>能理解前后端代码/接口契约/数据库状态/日志/部署环境/业务规则</li>
-          <li>能使用AI辅助生成测试用例/边界条件/自动化脚本/缺陷分析报告</li>
+          <li>能使用AI辅助生成测试用例/边界条件/自动化脚本</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -804,39 +599,501 @@
       </div>
     </div>
 
-    <!-- Job 12 -->
+    <!-- ========== 中旬岗位 ========== -->
+
     <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
       <div class="job-header">
-        <div class="job-title">AI研发工程师</div>
+        <div class="job-title">推荐算法工程师</div>
+        <div class="job-salary">25-45K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">推荐算法</span><span class="job-tag">机器学习</span><span class="job-tag">NLP</span><span class="job-tag">大数据</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责内容推荐系统的算法研发，优化推荐效果和用户体验</li>
+          <li>分析用户行为数据，构建精准推荐模型，提升核心指标</li>
+          <li>跟踪前沿算法，将新技术应用于实际业务场景</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>3年+推荐算法/机器学习经验，有大规模推荐系统经验优先</li>
+          <li>熟悉协同过滤、深度学习推荐、Embedding等算法</li>
+          <li>熟练掌握Python/C++，熟悉TensorFlow/PyTorch</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">系统架构师（高并发方向）</div>
+        <div class="job-salary">40K内</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">系统架构</span><span class="job-tag">高并发</span><span class="job-tag">分布式</span><span class="job-tag">Go</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责公司核心系统架构设计，支撑高并发、高可用业务场景</li>
+          <li>主导技术选型、架构升级，解决复杂技术难题</li>
+          <li>制定技术规范和标准，指导团队落地</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>5年+系统架构经验，有千万级并发系统设计经验优先</li>
+          <li>精通分布式系统设计（一致性、可用性、分区容错）</li>
+          <li>熟悉Go/Java高并发编程，熟悉MySQL/Redis/Kafka</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="ai" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">高级Go开发工程师（战略参谋部）</div>
+        <div class="job-salary">40-70K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">Go</span><span class="job-tag">战略参谋部</span><span class="job-tag">高并发</span><span class="job-tag">AI辅助编程</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>参与公司战略级项目研发，支撑核心业务高速增长</li>
+          <li>主导高并发、分布式系统设计与实现</li>
+          <li>深入业务一线，快速响应业务需求并交付高质量解决方案</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>4年+ Go开发经验，精通微服务架构设计</li>
+          <li>有大型系统架构经验，具备复杂业务问题的分析和解决能力</li>
+          <li>熟练使用AI编程工具辅助开发</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">Go开发工程师</div>
         <div class="job-salary">20-40K</div>
       </div>
       <div class="job-meta">
-        <span>📍 远程</span>
-        <span>💼 P3-P6</span>
-        <span>👥 2人</span>
-        <span>🎓 本科+</span>
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 多人</span><span>🎓 本科+</span>
       </div>
       <div class="job-tags">
-        <span class="job-tag">Agent</span>
-        <span class="job-tag">RAG</span>
-        <span class="job-tag">vLLM</span>
-        <span class="job-tag">LoRA/SFT</span>
-        <span class="job-tag">全栈</span>
+        <span class="job-tag">Go</span><span class="job-tag">后端</span><span class="job-tag">微服务</span>
       </div>
       <div class="job-detail">
-        <h4>简历筛选要点</h4>
+        <h4>任职要求</h4>
         <ul>
-          <li>AI Native工作流重度用户（Cursor/Claude Code/Codex/DeepSeek等）</li>
-          <li>有VibeCoding/AI辅助开发实战经验，近3-6个月有能拿得出手的作品</li>
-          <li>在大数据/DevOps/平台研发/前端研发方向有积累和专长</li>
+          <li>2年+ Go后端开发经验</li>
+          <li>熟悉Go常用框架（gin/go-zero/kratos等）</li>
+          <li>熟悉MySQL/Redis/RabbitMQ等中间件</li>
+          <li>有高并发系统开发经验优先</li>
         </ul>
-        <h4>主修方向（至少一个方向有真深度）</h4>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">Python全栈开发工程师</div>
+        <div class="job-salary">面议</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">Python</span><span class="job-tag">全栈</span><span class="job-tag">Django/FastAPI</span><span class="job-tag">Vue/React</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
         <ul>
-          <li><strong>Agent与工作流</strong>：复杂Agent系统/工具编排/多模型协作/长任务调度</li>
-          <li><strong>推理与服务化</strong>：vLLM/SGLang/TensorRT等推理框架，GPU服务工程化</li>
-          <li><strong>RAG与检索</strong>：生产级RAG经验，向量库选型/混合检索/相关性评估</li>
-          <li><strong>应用层架构</strong>：高并发/流式输出/稳定性/可观测性/DevOps</li>
-          <li><strong>模型微调与评估</strong>：LoRA/SFT实战经验，自动化Eval体系设计</li>
+          <li>2年+ Python全栈开发经验</li>
+          <li>熟悉Django/FastAPI后端框架</li>
+          <li>熟悉Vue/React前端开发</li>
+          <li>有AI应用开发经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="product" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">AI产品经理</div>
+        <div class="job-salary">15-25K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 上海</span><span>💼 P4</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">AI产品</span><span class="job-tag">大模型</span><span class="job-tag">AIGC</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责AI产品的规划、设计与迭代</li>
+          <li>对接算法、研发团队，推动AI能力产品化落地</li>
+          <li>跟踪AI产品效果，持续优化用户体验</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+ AI产品经验，了解大模型能力边界</li>
+          <li>有AI应用从0到1落地经验优先</li>
+          <li>逻辑清晰，沟通能力强</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="product" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">运营系统产品经理</div>
+        <div class="job-salary">30-60K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">产品经理</span><span class="job-tag">运营系统</span><span class="job-tag">B端</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责运营系统产品设计，支撑业务高效运转</li>
+          <li>深入理解业务需求，转化为产品方案并推动落地</li>
+          <li>持续优化运营工具和流程，提升人效</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>3年+产品经理经验，有B端/运营系统经验优先</li>
+          <li>逻辑清晰，擅长业务流程设计和数据分析</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">PHP工程师（Web/App方向）</div>
+        <div class="job-salary">25-30K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 2人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">PHP</span><span class="job-tag">Web</span><span class="job-tag">App</span><span class="job-tag">Laravel</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+ PHP开发经验，熟悉Laravel框架</li>
+          <li>熟悉MySQL/Redis，熟悉API设计</li>
+          <li>有Web和App后端开发经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">Web前端开发工程师</div>
+        <div class="job-salary">20-30K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">前端</span><span class="job-tag">React</span><span class="job-tag">Vue</span><span class="job-tag">TypeScript</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+前端开发经验，熟练React或Vue</li>
+          <li>熟悉TypeScript，熟悉前端工程化（Webpack/Vite）</li>
+          <li>有AI辅助开发经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">安卓开发工程师</div>
+        <div class="job-salary">15-30K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">Android</span><span class="job-tag">Kotlin</span><span class="job-tag">Java</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+ Android开发经验</li>
+          <li>熟悉Kotlin/Java，熟悉Android SDK</li>
+          <li>有跨端开发经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">Java高级工程师</div>
+        <div class="job-salary">20-35K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">Java</span><span class="job-tag">Spring</span><span class="job-tag">微服务</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>4年+ Java开发经验，熟悉Spring Boot/MyBatis</li>
+          <li>熟悉微服务架构，熟悉MySQL/Redis/Kafka</li>
+          <li>有高并发系统开发经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">ComfyUI工程师（AIGC方向）</div>
+        <div class="job-salary">20-30K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">ComfyUI</span><span class="job-tag">AIGC</span><span class="job-tag">AI绘画</span><span class="job-tag">Stable Diffusion</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责ComfyUI工作流的设计、开发和优化</li>
+          <li>基于Stable Diffusion等模型构建AI生成流水线</li>
+          <li>将AIGC能力集成到产品中，提升内容生产效率</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>熟悉ComfyUI/Stable Diffusion，有实际项目经验</li>
+          <li>熟悉Python，有AI模型集成经验</li>
+          <li>有AIGC产品开发经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="product" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">内容增长型产品经理</div>
+        <div class="job-salary">20-35K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">增长</span><span class="job-tag">产品经理</span><span class="job-tag">内容平台</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+产品经验，有内容平台/增长经验优先</li>
+          <li>擅长数据分析，能通过数据驱动产品优化</li>
+          <li>对内容创作者生态有深刻理解</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="product" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">数据产品经理</div>
+        <div class="job-salary">15-25K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">数据产品</span><span class="job-tag">BI</span><span class="job-tag">数据分析</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+数据产品经验，熟悉BI工具和数据可视化</li>
+          <li>能独立完成数据产品规划和设计</li>
+          <li>有数据平台/报表产品经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="dev" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">AI爬虫工程师</div>
+        <div class="job-salary">15-30K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">爬虫</span><span class="job-tag">Python</span><span class="job-tag">反爬</span><span class="job-tag">异步</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+爬虫开发经验，精通Python</li>
+          <li>熟悉反爬策略和绕过技术</li>
+          <li>有异步爬虫（Scrapy/Playwright）经验</li>
+          <li>有AI辅助数据采集经验优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="manager" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">项目经理 / PO</div>
+        <div class="job-salary">25-40K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 英国</span><span>💼 P5-P6</span><span>👥 1人</span><span>🎓 本科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">项目经理</span><span class="job-tag">PO</span><span class="job-tag">Scrum</span><span class="job-tag">Agile</span>
+      </div>
+      <div class="job-detail">
+        <h4>任职要求</h4>
+        <ul>
+          <li>3年+项目管理经验，有互联网/出海项目经验优先</li>
+          <li>熟悉Scrum/Agile，能全英文沟通</li>
+          <li>有PMP/PRINCE2认证优先</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="seo" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">白帽SEO</div>
+        <div class="job-salary">8-20K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P3-P6</span><span>👥 1人</span><span>🎓 专科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">SEO</span><span class="job-tag">Google</span><span class="job-tag">内容优化</span><span class="job-tag">数据分析</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责网站SEO策略制定与执行，提升搜索引擎排名</li>
+          <li>分析关键词、竞争对手，制定优化方案</li>
+          <li>监控SEO效果，持续优化策略</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>2年+白帽SEO经验，有成功案例优先</li>
+          <li>熟悉Google SEO算法和工具</li>
+          <li>有内容营销经验，能输出高质量内容</li>
+        </ul>
+        <div class="job-actions">
+          <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-card" data-tags="seo" onclick="toggleCard(this)">
+      <div class="job-section-tag tag-mid">中旬热招</div>
+      <div class="job-header">
+        <div class="job-title">黑帽SEO</div>
+        <div class="job-salary">8-20K</div>
+      </div>
+      <div class="job-meta">
+        <span>📍 远程</span><span>💼 P3-P6</span><span>👥 1人</span><span>🎓 专科+</span>
+      </div>
+      <div class="job-tags">
+        <span class="job-tag">SEO</span><span class="job-tag">流量</span><span class="job-tag">灰产</span>
+      </div>
+      <div class="job-detail">
+        <h4>岗位职责</h4>
+        <ul>
+          <li>负责海外流量获取和增长</li>
+          <li>通过黑帽/灰帽手段快速提升排名和流量</li>
+          <li>熟悉站群、蜘蛛池、泛目录等技术</li>
+        </ul>
+        <h4>任职要求</h4>
+        <ul>
+          <li>有丰富黑帽SEO实战经验</li>
+          <li>熟悉各种黑帽手法和工具</li>
+          <li>了解海外搜索引擎规则</li>
         </ul>
         <div class="job-actions">
           <a href="https://t.me/foya991" class="btn-primary">立即投递</a>
@@ -847,12 +1104,11 @@
   </div>
 </div>
 
-<!-- Contact -->
 <div class="contact">
   <h2>📩 联系我们</h2>
   <div class="contact-item">联系HR → <strong>@foya991</strong></div>
   <div class="contact-item">投递频道 → <strong>@Foya00</strong></div>
-  <div class="contact-item" style="margin-top:16px;opacity:0.7;font-size:0.9rem">📍 工作地点：远程 &nbsp;|&nbsp; ⏰ 工作时间：996（周休一天半）</div>
+  <div class="contact-item" style="margin-top:16px;opacity:0.7;font-size:0.9rem">📍 工作地点：远程为主（部分岗位上海/英国）&nbsp;|&nbsp; ⏰ 工作时间：996（周休一天半）</div>
 </div>
 
 <footer>
@@ -863,18 +1119,12 @@
 function toggleCard(card) {
   card.classList.toggle('open');
 }
-
 function filterJobs(tag) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
-
   document.querySelectorAll('.job-card').forEach(card => {
-    if (tag === 'all') {
-      card.style.display = '';
-    } else {
-      const tags = card.getAttribute('data-tags') || '';
-      card.style.display = tags.includes(tag) ? '' : 'none';
-    }
+    if (tag === 'all') { card.style.display = ''; }
+    else { const tags = card.getAttribute('data-tags') || ''; card.style.display = tags.includes(tag) ? '' : 'none'; }
   });
 }
 </script>
